@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case $TARGETPLATFORM in
+  linux/arm64)
+    CC=aarch64-linux-gnu-gcc
+    ;;
+
+  *)
+    CC=gcc
+    ;;
+esac
+
+$CC $*
